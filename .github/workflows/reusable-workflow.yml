@@ -20,5 +20,7 @@ jobs:
       run: echo "RECEIVED VAR ${{inputs.REMOTE_VAR}}"
     - name: Show env vars
       run: echo "RECEIVED PARAMETER ${{ vars.PARAMETER }}"
+    - name: Show secret
+      run: echo "RECEIVED PARAMETER ${{ secrets.SECRET_ID }}"
     
     
