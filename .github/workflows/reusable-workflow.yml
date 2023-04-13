@@ -1,0 +1,21 @@
+name: Reusable-workflow
+
+on:
+  workflow_call:
+    inputs:
+      REMOTE_VAR:
+        required: true
+        type: string
+      ENVIRONMENT:
+        required: true
+        type: string
+        
+jobs:
+  Print-inputs:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.ENVIRONMENT }}
+    steps:
+    - name: Run a one-line script
+      run: echo "RECEIVED VAR ${{inputs.REMOTE_VAR}}"
+    
