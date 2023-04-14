@@ -9,6 +9,9 @@ on:
       ENVIRONMENT:
         required: true
         type: string
+    secrets:
+      RECEIVED_SECRET:
+        required: true
         
 jobs:
   Print-inputs:
@@ -21,6 +24,6 @@ jobs:
     - name: Show env vars
       run: echo "RECEIVED PARAMETER ${{ vars.PARAMETER }}"
     - name: Show secret
-      run: echo "RECEIVED PARAMETER ${{ secrets.SECRET_ID }}"
+      run: echo "RECEIVED SECRET ${{ secrets.RECEIVED_SECRET }}"
     
     
