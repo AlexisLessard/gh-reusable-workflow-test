@@ -25,5 +25,7 @@ jobs:
       run: echo "RECEIVED PARAMETER ${{ vars.PARAMETER }}"
     - name: Show secret
       run: echo "RECEIVED SECRET ${{ secrets.RECEIVED_SECRET }}"
+    - name: Show local files
+      run: ls -al .
     
     
